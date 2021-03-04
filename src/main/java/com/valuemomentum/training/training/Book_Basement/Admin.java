@@ -51,6 +51,7 @@ public class Admin {
 					addBooks();
 					break;
 				case 4:
+					exit();
 					t=false;
 					break;
 				default:
@@ -179,6 +180,11 @@ public class Admin {
 			}
 			rs.close();
 			stmt.close();
+			
+		}
+	public void exit() throws SQLException {
+			con.close();
+			System.exit(1);
 			
 		}
 		
