@@ -577,7 +577,10 @@ public class User {
 		System.out.println("TERMINATED PROCESS DUE TO INVALID CREDENTIALS");
 		System.exit(1);
 	}
-	void end() {
+	void end() throws SQLException {
+		con.close();
+		stmt.close();
+		rs.close();
 		System.out.println("------------------------------------THANKYOU FOR USING BOOK BASEMENT------------------------");
 		System.exit(1);
 		
